@@ -6,6 +6,7 @@ public class DFStraversal {
         // int edgs2[][]={{1,2},{0,2,3},{0,1,4},{1,4},{2,3}};
        DFStraversal dfs = new DFStraversal();
        dfs.dfsTraversal(edgs); 
+    //    dfs.dfsTraversal(edgs2);
     }
 
     void dfsTraversal(int arr [][]){
