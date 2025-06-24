@@ -3,24 +3,25 @@ import java.util.Stack;
 public class DFStraversal {
     public static void main(String[] args) {
         int edgs[][]={{0,1},{1,2},{2,0}};
-        // int edgs2[][]={{1,2},{0,2,3},{0,1,4},{1,4},{2,3}};
+        int edgs2[][]={{1,2},{0,2},{0,1,3,4},{2},{2}};
        DFStraversal dfs = new DFStraversal();
-       dfs.dfsTraversal(edgs); 
-    //    dfs.dfsTraversal(edgs2);
+    //    dfs.dfsTraversal(edgs); 
+       dfs.dfsTraversal(edgs2);
     }
 
     void dfsTraversal(int arr [][]){
         int size=arr.length;
         int [][] adjmatrix = new int[size][size];
-
-        for(int[]edge:arr){
-            int u = edge[0];
-            int v = edge[1];
+        
+        for(int u=0; u<arr.length; u++){
+        for(int v:arr[u]){
+            // u = edge[0];
+            // v = edge[1];
             adjmatrix[u][v]=1;
             adjmatrix[v][u]=1;
-
+            }
         }
-
+       
         Stack<Integer> stack = new Stack<>();
         boolean [] visited = new boolean[size];
 
