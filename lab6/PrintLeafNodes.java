@@ -30,6 +30,6 @@ public class PrintLeafNodes {
         node.right.right = new TreeNode(7);
 
         PrintLeafNodes leafNodes = new PrintLeafNodes();
-       leafNodes.findLeafNode(node);
+        leafNodes.findLeafNode(node);
     }
 }
